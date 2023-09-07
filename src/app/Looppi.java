@@ -9,20 +9,19 @@ public class Looppi {
 		int numberOfGuesses = 0;
 		String userGuess;
 		
-        System.out.println("Guess my name(type stop to exit)");
+        System.out.println("Guess my name (type stop to exit)");
         do {
         	userGuess = in.nextLine();
         	numberOfGuesses++;
         	
         	if (userGuess.equalsIgnoreCase(correctAnswer)) {
-        		System.out.println("Congratulation!");
+        		System.out.println("Congratulations!");
         		break;
         	}else if (userGuess.equalsIgnoreCase("stop")) {
-        		System.out.println("Game over. You stopped guessing.");
         		numberOfGuesses--;
         		break;       		
         	}else {
-        		System.out.println("Incorrect guess. Try again");        		
+        		System.out.println("Guess my name (type stop to exit)");        		
         	}
         }while (true);
         System.out.println("You guessed " + numberOfGuesses + " times.");
